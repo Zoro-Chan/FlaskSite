@@ -1,7 +1,7 @@
 function login(){
-    location.href = "{{ url_for('login') }}";
+    location.href = "/login";
 }
 
 function register(){
-    location.href = "{{ url_for('register') }}";
+    location.href = "/join}";
 } 
