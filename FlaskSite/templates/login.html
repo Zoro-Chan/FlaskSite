@@ -1,0 +1,31 @@
+{% extends "boilerplate.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="mb-4">Hey, welcome back!</legend>
+                <div class="form-group">
+                    {{ form.email.label(class="form-control-label") }}
+                    {{ form.email(class="form-control form-control-lg") }}
+                </div>
+                <br>
+                <div class="form-group">
+                    {{ form.password.label(class="form-control-label") }}
+                    {{ form.password(class="form-control form-control-lg") }}
+                </div>
+                <br>
+                <div class="form-check">
+                    {{ form.remember(class="form-check-input") }}
+                    {{ form.remember.label(class="form-check-label") }}
+                </div>
+            </fieldset>
+            <br>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+                <br>
+                <small class="text-muted">New to NoBrainers? Check the <a href="{{ url_for('register') }}">Rules & FAQ</a> and then <a href="{{ url_for('about') }}">Sign Up</a>!</small>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

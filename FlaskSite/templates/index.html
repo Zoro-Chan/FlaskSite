@@ -1,0 +1,12 @@
+{% extends "boilerplate.html" %}
+{% block content %}
+    <div class="bg-dark bg-gradient m-4 rounded">
+        <h2 class="p-4">Available Topics</h2>
+        {% for topic in topics %}
+            <div class="bg-secondary rounded pt-1 pb-1 m-3">
+                <a href="/{{ topic.slug }}/{{ topic.name }}" class="nav-link link-dark">{{ topic.name }}</a>
+            </div>
+            <br>
+        {% endfor %}
+    </div>
+{% endblock content %}
